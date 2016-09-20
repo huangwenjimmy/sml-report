@@ -53,6 +53,7 @@ public class ReportCommonService extends Source{
 			getCacheManager().set(key, result,-1);
 		return result;
 	}
+	@SuppressWarnings("unchecked")
 	public List<PiTableDetail> findAllByTableId(String id){
 		String key=CACHE_PRE+":"+id+":findAllByTableId";
 		if(getCacheManager().get(key)!=null){
